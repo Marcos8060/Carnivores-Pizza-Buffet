@@ -36,3 +36,10 @@ body{
     margin-left: 500px;
     margin-top: -80px;
 }
+span{
+    color: #e64646;
+    font-size: 60px;
+}
+.deliver{
+    color: white;
+}
