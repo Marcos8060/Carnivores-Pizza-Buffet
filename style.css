@@ -1,0 +1,14 @@
+/* navbar */
+.cart{
+    margin-right: 200px;
+    cursor: pointer;
+    height: 50px;
+}
+.navbar{
+    box-shadow: 0px 3px 8px gray;
+    background-color: #FEF4F3;
+}
+.navbar-nav a{
+    color: black;
+    text-transform: uppercase;
+}
