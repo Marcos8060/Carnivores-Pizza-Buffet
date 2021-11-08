@@ -96,3 +96,6 @@ h1{
 .hello{
     color: black;
 }
+.thumbnail{
+    margin-top: -100px;
+}
