@@ -43,3 +43,17 @@ span{
 .deliver{
     color: white;
 }
+.btn{
+    background-color: #e64646;
+    color: white;
+    height: 45px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: 'poppins',sans-serif;
+}
+.btn:hover{
+    font-size: 18px;
+    transition: 2s;
+    padding-bottom: 3px;
+    color: white;
+}
