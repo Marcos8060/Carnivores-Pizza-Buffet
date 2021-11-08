@@ -69,6 +69,7 @@ span{
 /* about section */
 .about_section{
     margin-top: 100px;
+    background-color: white;
 }
 .serve{
     color: #e64646;
@@ -87,4 +88,11 @@ h1{
 }
 .row h4{
     font-weight: bolder;
+}
+/* menu section */
+.menu_section{
+    margin-top: 70px;
+}
+.hello{
+    color: black;
 }
