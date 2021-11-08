@@ -57,3 +57,12 @@ span{
     padding-bottom: 3px;
     color: white;
 }
+.happy{
+    display: flex;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+.rounded-circle{
+    width: 50px;
+    height: 50px;
+}
