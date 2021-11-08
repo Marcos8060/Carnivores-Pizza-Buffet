@@ -95,9 +95,10 @@ h1{
     margin-top: 70px;
 }
 .products{
-    background-color: white;
+    background-color: rgb(218, 204, 204);
     border-radius: 20px;
-    height: 370px;
+    height: 400px;
+    width: 300px;
     margin: 20px;
     text-align: center;
 }
@@ -118,4 +119,8 @@ select option{
     font-weight: bold;
     font-family: 'poppins',sans-serif;
     margin-top: 5px;
+}
+.price{
+    display: flex;
+    align-items: center;
 }
