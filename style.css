@@ -124,3 +124,11 @@ select option{
     display: flex;
     align-items: center;
 }
+/* testimonial section */
+.testimonial{
+    margin-top: 100px;
+}
+.chef{
+    height: 400px;
+    width: 300px;
+}
