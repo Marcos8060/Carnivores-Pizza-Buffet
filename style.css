@@ -50,6 +50,7 @@ span{
     border-radius: 20px;
     font-weight: bold;
     font-family: 'poppins',sans-serif;
+    margin-top: 5px;
 }
 .btn:hover{
     font-size: 18px;
@@ -93,14 +94,28 @@ h1{
 .menu_section{
     margin-top: 70px;
 }
-.hello{
-    color: black;
+.products{
+    background-color: white;
+    border-radius: 20px;
+    height: 370px;
+    margin: 20px;
+    text-align: center;
 }
-.thumbnail h3,small{
-    margin-top: -100px;
+.products img{
+    width: 150px;
+    height: 150px;
 }
-.menu_section img{
-    border-radius: 30px;
-    height: 350px;
-    width: 350px;
+select option{
+    width: 50px;
+}
+.btn2{
+    border: none;
+    background-color: #e64646;
+    color: white;
+    height: 45px;
+    width: 200px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: 'poppins',sans-serif;
+    margin-top: 5px;
 }
