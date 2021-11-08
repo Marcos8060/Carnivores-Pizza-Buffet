@@ -66,3 +66,14 @@ span{
     width: 50px;
     height: 50px;
 }
+/* about section */
+.about_section{
+    margin-top: 100px;
+}
+.serve{
+    color: #e64646;
+    font-weight: 700;
+}
+h1{
+    font-weight: bolder;
+}
