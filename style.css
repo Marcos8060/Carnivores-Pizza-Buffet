@@ -132,6 +132,9 @@ select option{
     margin-top: 70px;
     margin-bottom: 50px;
 }
+.testimonial h1{
+    font-weight: bolder;
+}
 .background{
     position: relative;
     background-color: #e64646;
@@ -141,10 +144,13 @@ select option{
     border-bottom-left-radius: 20%;
     text-align: center;
     height: 300px;
-    width: 400px;
+    width: 350px;
 }
 .chef{
     margin-top: -90px;
     height: 400px;
     width: 300px;
+}
+.star{
+    width: 30px;
 }
