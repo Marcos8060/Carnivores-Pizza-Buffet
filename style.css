@@ -126,9 +126,25 @@ select option{
 }
 /* testimonial section */
 .testimonial{
-    margin-top: 100px;
+    background-color: white;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+.background{
+    position: relative;
+    background-color: #e64646;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 20%;
+    text-align: center;
+    height: 300px;
+    width: 400px;
 }
 .chef{
+    margin-top: -90px;
     height: 400px;
     width: 300px;
 }
