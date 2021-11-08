@@ -96,6 +96,11 @@ h1{
 .hello{
     color: black;
 }
-.thumbnail{
+.thumbnail h3,small{
     margin-top: -100px;
+}
+.menu_section img{
+    border-radius: 30px;
+    height: 350px;
+    width: 350px;
 }
