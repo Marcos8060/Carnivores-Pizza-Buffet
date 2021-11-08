@@ -25,6 +25,9 @@ body{
     z-index: -1;
 }
 /* Hero section */
+.hero_details h1{
+    margin-top: 100px;
+}
 .hero-section{
     background-color: #FEF4F3;
 }
