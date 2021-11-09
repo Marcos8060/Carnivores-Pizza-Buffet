@@ -6,3 +6,7 @@ const ui = new UI;
 products.forEach((product)=>{
     ui.displayProducts(product.imgSrc,product.title,product.size,product.price);
 })
+
+// add to cart function
+let cart = [];
+
