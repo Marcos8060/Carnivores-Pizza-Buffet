@@ -30,10 +30,14 @@ class UI  {
                         </div>
                     `
     }
-    appendItemsInCart(imgSrc,numberOfUnits,price,id){
+    appendItemsInCart(imgSrc,numberOfUnits,price,id,title,size){
         this.cartItems.innerHTML += `
                         <div class="items d-flex justify-content-between align-items-center underline1">
-                        <img class="img-fluid" src=${imgSrc} alt="pizza" style="width: 60px;">
+                        <div>
+                        <img class="img-fluid" src=${imgSrc} alt="pizza" style="width: 60px;"><br>
+                        <small>${title}</small><br>
+                        <small>${size}</small>
+                        </div>
                         <div class="units d-flex justify-content-between align-items-center">
                         <img onClick="changeUnits('minus',${id})" src="https://img.icons8.com/ios-glyphs/30/fa314a/minus.png"/>
                         <b style="font-size: 25px;">${numberOfUnits}</b>
@@ -43,11 +47,12 @@ class UI  {
                         </div>
                     `
     }
-    getSubToTals(){
+    getSubToTals(totalPrice,totalUnits){
         this.subTotals.innerHTML = `
                         <div class="totals d-flex justify-content-between">
                             <h5>Totals</h5>
-                            <h5 class="font-weight-bold">$450</h5>
+                            <h6>${totalUnits} (units)</h6>
+                            <h5 class="font-weight-bold">$${totalPrice}</h5>
                         </div>
                     `
     }

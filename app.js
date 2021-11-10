@@ -31,13 +31,18 @@ function updateCart(){
 }
 // get subtotals
 function getSubToTals(){
-    ui.getSubToTals();
+    let totalPrice = 0, totalUnits = 0;
+    cart.forEach((item)=>{
+        totalPrice += item.price * item.numberOfUnits;
+        totalUnits += item.numberOfUnits;
+    })
+    ui.getSubToTals(totalPrice,totalUnits);
 }
 // append items in cart
 function appendItemsInCart(){
     ui.cartItems.innerHTML = "";
     cart.forEach((item)=>{
-        ui.appendItemsInCart(item.imgSrc,item.numberOfUnits,item.price,item.id);
+        ui.appendItemsInCart(item.imgSrc,item.numberOfUnits,item.price,item.id,item.title,item.size);
     })
 }
 
@@ -46,7 +51,7 @@ function changeUnits(action,id){
     cart = cart.map((item)=>{
         let numberOfUnits = item.numberOfUnits;
         if(item.id === id){
-            if(action === 'minus'){
+            if(action === 'minus' && numberOfUnits > 1){
                 numberOfUnits--
             }else if(action === 'plus'){
                 numberOfUnits++
