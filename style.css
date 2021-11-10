@@ -9,6 +9,10 @@ body{
     border-bottom: 2px solid black;
     margin-bottom: 5px;
 }
+.underline1{
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+}
 /* navbar */
 .cart{
     margin-right: 200px;
