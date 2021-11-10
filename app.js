@@ -1,6 +1,8 @@
 // init UI
 const ui = new UI;
 
+const totalCartItems = document.querySelector('.totalItemsInCart');
+
 // iterate through the products array
 products.forEach((product)=>{
     ui.displayProducts(product.imgSrc,product.title,product.size,product.price,product.id);
@@ -35,6 +37,7 @@ function getSubToTals(){
     cart.forEach((item)=>{
         totalPrice += item.price * item.numberOfUnits;
         totalUnits += item.numberOfUnits;
+        totalCartItems.innerHTML = totalUnits;
     })
     ui.getSubToTals(totalPrice,totalUnits);
 }

@@ -13,9 +13,14 @@ body{
     border-bottom: 1px solid black;
     margin-bottom: 5px;
 }
+.totalItemsInCart{
+    font-weight: bolder;
+    margin-top: -30px;
+    margin-right: 150px;
+    font-size: 30px;
+}
 /* navbar */
 .cart{
-    margin-right: 200px;
     cursor: pointer;
     height: 50px;
 }
