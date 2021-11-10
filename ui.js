@@ -1,6 +1,9 @@
 class UI  {
     constructor(){
         this.showProducts = document.querySelector('.menuItems');
+        this.cartItems = document.querySelector('.cartItems');
+        this.subTotals = document.querySelector('.subTotals');
+
     }
 
     displayProducts(img,title,size,price,id){
@@ -24,7 +27,29 @@ class UI  {
                         <option value="3">Bacon</option>
                         </select>
                         <button class="btn2" onClick="addToCart(${id})">Add to cart</button>
-                    </div>
-        `
+                        </div>
+                    `
     }
+    appendItemsInCart(imgSrc,numberOfUnits,price,id){
+        this.cartItems.innerHTML += `
+                        <div class="items d-flex justify-content-between align-items-center underline1">
+                        <img class="img-fluid" src=${imgSrc} alt="pizza" style="width: 60px;">
+                        <div class="units d-flex justify-content-between align-items-center">
+                        <img onClick="changeUnits('minus',${id})" src="https://img.icons8.com/ios-glyphs/30/fa314a/minus.png"/>
+                        <b style="font-size: 25px;">${numberOfUnits}</b>
+                        <img onClick="changeUnits('plus',${id})" src="https://img.icons8.com/ios-glyphs/30/fa314a/plus.png"/>
+                        </div>
+                        <p class="font-weight-bold">$${price}</p>
+                        </div>
+                    `
+    }
+    getSubToTals(){
+        this.subTotals.innerHTML = `
+                        <div class="totals d-flex justify-content-between">
+                            <h5>Totals</h5>
+                            <h5 class="font-weight-bold">$450</h5>
+                        </div>
+                    `
+    }
+
 }

@@ -1,7 +1,6 @@
 // init UI
 const ui = new UI;
 
-const cartItems = document.querySelector('.cartItems');
 // iterate through the products array
 products.forEach((product)=>{
     ui.displayProducts(product.imgSrc,product.title,product.size,product.price,product.id);
@@ -27,22 +26,37 @@ function addToCart(id){
 }
 // update cart
 function updateCart(){
-    appendItemsIncart();
+    appendItemsInCart();
+    getSubToTals();
+}
+// get subtotals
+function getSubToTals(){
+    ui.getSubToTals();
 }
 // append items in cart
-function appendItemsIncart(){
+function appendItemsInCart(){
+    ui.cartItems.innerHTML = "";
     cart.forEach((item)=>{
-        cartItems.innerHTML += `
-                <div class="items d-flex justify-content-between align-items-center underline1">
-                <img class="img-fluid" src=${item.imgSrc} alt="pizza" style="width: 60px;">
-                <div class="units d-flex justify-content-between align-items-center">
-                <img src="https://img.icons8.com/ios-glyphs/30/fa314a/plus-math.png"/>
-                <b style="font-size: 25px;">${item.numberOfUnits}</b>
-                <img src="https://img.icons8.com/material/24/fa314a/minus--v2.png"/>
-                </div>
-                <h4>$${item.price}</h4>
-                </div>
-        `
+        ui.appendItemsInCart(item.imgSrc,item.numberOfUnits,item.price,item.id);
     })
+}
+
+// change number of units
+function changeUnits(action,id){
+    cart = cart.map((item)=>{
+        let numberOfUnits = item.numberOfUnits;
+        if(item.id === id){
+            if(action === 'minus'){
+                numberOfUnits--
+            }else if(action === 'plus'){
+                numberOfUnits++
+            }
+        }
+        return {
+            ...item,
+            numberOfUnits,
+        }
+    })
+    updateCart();
 }
 
