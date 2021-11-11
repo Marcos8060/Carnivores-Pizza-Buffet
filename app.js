@@ -13,17 +13,18 @@ products.forEach((product)=>{
 let cart = [];
 
 function addToCart(id){
-    // check if product already in cart
-    if(cart.some((item)=>item.id === id)){
-        alert('Product already in cart!')
+    // check if already in cart
+    if(cart.some((item)=> item.id === id)){
+        alert('item already in cart')
     }else{
         const item = products.find((product)=> product.id === id);
   
-        cart.push({
-            ...item,
-            numberOfUnits: 1,
-        })
+       cart.push({
+           ...item,
+           numberOfUnits:1,
+       })
     }
+
     updateCart();
 }
 // update cart
