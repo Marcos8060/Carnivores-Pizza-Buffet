@@ -12,6 +12,7 @@
           integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
           crossorigin="anonymous">
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="shortcut icon" href="./Images/pizza1.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Pizza-Buffet</title>
@@ -83,26 +84,12 @@
             <div class="modal-body">
               <div>
                 <div class="row checkout">
-                  <!-- <div class="col order">
-                    <h5>crispy</h5>
-                    <p>small</p>
-                    <p>mushroom</p>
-                  </div>
-                  <div class="col order">
-                    <p>crispy</p>
-                    <p>small</p>
-                    <p>mushroom</p>
-                    
-                  </div>
-                  <div class="col order">
-                    <h5>crispy</h5>
-                    <p>small</p>
-                    <p>mushroom</p>
-                  </div> -->
+                  <!-- checkout section -->
                 </div>
               </div>
             </div>
             <div class="modal-footer">
+              <button class="btn" data-bs-toggle="modal" data-bs-target="#delivery" data-bs-dismiss="modal">Proceed to delivery</button>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
@@ -110,6 +97,36 @@
       </div>
 
       <!-- End of checkout modal -->
+
+      <!-- delivery modal -->
+  
+<!-- Modal -->
+      <div class="modal fade" id="delivery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="searchContainer">
+                <div class="search"></div>
+              </div>
+              <form id="form">
+                <label for="name" class="form-label">Name</label>
+                <input id="name" type="text" class="form-control">
+                <label for="location" class="form-label">Location</label>
+                <input id="location" type="text" class="form-control">
+                <button class="btn2">Submit</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of delivery modal -->
 
       
       <!-- Hero section -->
@@ -226,5 +243,41 @@
       <script src="products.js"></script>
       <script src="ui.js"></script>
       <script src="app.js"></script>
+      <script>
+        $(document).ready(function(){
+          $('#form').submit(function(e){
+            e.preventDefault();
+            var name = $('input#name').val();
+            var location = $('input#location').val();
+
+            if(name !== '' && location !== ''){
+              // create element
+               const h5 = document.createElement('h5');
+               h5.className = 'alert alert-success';
+               h5.appendChild(document.createTextNode(`Thank you ${name}, your order will be delivered to ${location}`));
+               const searchContainer = document.querySelector('.searchContainer');
+               const search = document.querySelector('.search');
+               searchContainer.insertBefore(h5,search);
+            }else{
+              clearAlert();
+              const h5 = document.createElement('h5');
+               h5.className = 'alert alert-danger';
+               h5.appendChild(document.createTextNode(`You are required to fill all the fields!`));
+               const searchContainer = document.querySelector('.searchContainer');
+               const search = document.querySelector('.search');
+               searchContainer.insertBefore(h5,search);
+            }
+            setTimeout(()=>{
+              clearAlert();
+            },5000);
+          })
+          function clearAlert(){
+            const currentAlert = document.querySelector('.alert');
+            if(currentAlert){
+              currentAlert.remove();
+            }
+          }
+        })
+      </script>
 </body>
 </html>

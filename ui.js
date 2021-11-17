@@ -22,7 +22,6 @@ class UI  {
                         </div>
                         </div>
                         <select class="form-select" aria-label="Default select example">
-                        <option selected>Choose topping</option>
                         <option value="1">Pepperoni</option>
                         <option value="2">Mushroom</option>
                         <option value="3">Bacon</option>
