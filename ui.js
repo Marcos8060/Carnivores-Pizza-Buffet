@@ -3,6 +3,7 @@ class UI  {
         this.showProducts = document.querySelector('.menuItems');
         this.cartItems = document.querySelector('.cartItems');
         this.subTotals = document.querySelector('.subTotals');
+        this.checkout = document.querySelector('.checkout');
 
     }
 
@@ -56,5 +57,13 @@ class UI  {
                         </div>
                     `
     }
-
+    appendSummary(title,size){
+        this.checkout.innerHTML += `
+                        <div class="col order">
+                        <h5>${title}</h5>
+                        <p>${size}</p>
+                        <p>mushroom</p>
+                        </div>
+        `
+    }
 }

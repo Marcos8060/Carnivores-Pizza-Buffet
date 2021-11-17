@@ -31,6 +31,7 @@ function addToCart(id){
 function updateCart(){
     appendItemsInCart();
     getSubToTals();
+    showSummary();
 }
 // get subtotals
 function getSubToTals(){
@@ -50,7 +51,15 @@ function appendItemsInCart(){
     })
 }
 
-// change number of units
+// show summary
+function showSummary(){
+    ui.checkout.innerHTML = "";
+    cart.forEach((item)=>{
+        ui.appendSummary(item.title,item.size);
+    });
+}
+
+// change number of unit
 function changeUnits(action,id){
     cart = cart.map((item)=>{
         let numberOfUnits = item.numberOfUnits;
